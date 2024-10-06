@@ -145,9 +145,9 @@ html {
 .card{
     display:grid;
 
-    height: 200px;
+    height: 150px;
     width: minmax(300px, 100%);
-    padding: 30px 10px;
+    padding: 30px 10px 10px 10px;
 
     font-size: 1em;
     color:rgb(131, 127, 127);
@@ -156,7 +156,25 @@ html {
     box-shadow: 5px 5px 10px 1px rgba(202, 201, 201, 0.8);
     border-left: 6px solid rgb(245, 182, 10);
 }
-
+.widgets{
+    justify-self: end;
+    align-self: end;
+}
+.widgets button{
+    background: none;
+    border: none;
+    padding: 10px; 
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.widgets button img {
+    width: 25px;
+    height: 25px;
+    fill: #000000;
+}
+.widgets button:hover img {
+    transform: scale(1.1);
+}
 .project-name{
     font-weight: bold;
     color: black;
@@ -167,6 +185,3 @@ html {
     
 }
 
-.widgets{
-    justify-self: end;
-}
