@@ -21,15 +21,34 @@ html {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
 
-    background-color: rgb(169, 235, 235);
+    padding: 0px 10px 10px 10px;
+    background-color: white;
+    font-size: 18px;
 }
 .searchbar, .greeting-box{
-    margin-left: 10%;
+    margin-left: 5%;
 }
-
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.buttons button{
+    padding: 10px 30px;
+    color:white;
+    background-color: royalblue;
+    border-radius: 30px;
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+.user-name{
+    font-weight: bold;
+}
 .searchbar {
-    align-self: center;
-    justify-self: center;
+    display: flex;  /* Use flexbox to align items horizontally */
+    align-items: center;  /* Vertically center the items */
+    gap: 5px;  /* Optional: Adds a little space between the button and input */
 
     
     width:100%;
@@ -38,14 +57,31 @@ html {
     display: flex;
     gap: 10px;
     align-items: center;
+    justify-content: space-around;
 }
-
+.profile div img {
+    height: 40px;
+    border-radius: 30px;
+}
 .greeting-box{
     display: flex;
     gap: 10px;
 }
+.greeting-box img{
+    height: 70px;
+    border-radius: 30px;
+}
 .greeting-box .greeting div:first-child{
     font-size: 12px;
+}
+.greeting{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.greeting div:nth-child(2) {
+    font-weight: bold;
+    font-size: 20px
 }
 
 .searchbar input {
@@ -172,6 +208,10 @@ html {
     display: flex;
     gap: 10px;
 }
+.trending-user div img{
+    height: 40px;
+    border-radius: 30px;
+}
 .announcements ,.trending-tab{
     margin-right: 20px;
     margin-bottom: 40px;
@@ -197,19 +237,19 @@ html {
     justify-self: end;
     align-self: end;
 }
-.widgets button{
+.widgets button, .searchbar button, .profile button{
     background: none;
     border: none;
     padding: 10px; 
     cursor: pointer;
     transition: transform 0.2s ease;
 }
-.widgets button img {
+.widgets button img , .searchbar button img, .profile button img{
     width: 25px;
     height: 25px;
     fill: #000000;
 }
-.widgets button:hover img {
+.widgets button:hover img, .searchbar button:hover img, .profile button:hover img{
     transform: scale(1.1);
 }
 
