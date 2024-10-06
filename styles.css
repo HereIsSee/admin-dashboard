@@ -10,7 +10,7 @@ html {
     display:grid;
 
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: minmax(100px, 150px) 4fr;
 }
 
 .header{
@@ -93,7 +93,7 @@ html {
 .main-content{
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 3fr 1fr 2fr;
+    grid-template-rows: 50px 3fr 50px 2fr;
 
     grid-column: 2 / 3;
     grid-row: 2 / 3;
@@ -104,6 +104,8 @@ html {
 .projects-header{
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+
+    margin-left: 20px;
 }
 .announcements-header{
     grid-column: 2 / 3;
@@ -111,13 +113,21 @@ html {
 }
 #projects{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-
+    padding:20px;
 
 
     grid-column: 1 / 2;
     grid-row: 2 / 5;
+}
+
+.announcements-header, .trending-header,
+.projects-header {
+    font-weight: bold;
+    font-size: 1.5em;
+    justify-self: start;
+    align-self: end;
 }
 .announcements{
     grid-column: 2 / 3;
@@ -133,6 +143,30 @@ html {
 }
 
 .card{
-    height: 100px;
-    width: 200px;
+    display:grid;
+
+    height: 200px;
+    width: minmax(300px, 100%);
+    padding: 30px 10px;
+
+    font-size: 1em;
+    color:rgb(131, 127, 127);
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 1px rgba(202, 201, 201, 0.8);
+    border-left: 6px solid rgb(245, 182, 10);
+}
+
+.project-name{
+    font-weight: bold;
+    color: black;
+    font-size: 1.5em;
+}
+.content {
+    margin-bottom:20px;
+    
+}
+
+.widgets{
+    justify-self: end;
 }
