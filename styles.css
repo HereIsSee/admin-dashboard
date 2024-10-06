@@ -89,16 +89,15 @@ html {
 }
 
 
-
-.main-content{
+.main-content {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 50px 3fr 50px 2fr;
-
+    grid-template-rows: 50px auto; 
+    grid-auto-rows: max-content;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-
     background-color: azure;
+    gap: 20px;
 }
 
 .projects-header{
@@ -129,10 +128,33 @@ html {
     justify-self: start;
     align-self: end;
 }
+.project-name, .announcement-name, .user-handle{
+    font-weight: bold;
+    color: black;
+    font-size: 1.2em;
+}
 .announcements{
+    display: grid;
+    grid-template-columns: 1fr;
+    
+    padding: 10px;
+    margin-top: 20px;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+
+    background-color: white;
+    
 }
+.announcement{
+    margin: 0px;
+    padding: 10px;
+    border-bottom: 1px solid rgb(206, 197, 197);;
+}
+.announcement:last-child {
+    border-bottom: none;
+}
+
+
 .trending-header{
     grid-column: 2 / 3;
     grid-row: 3 / 4;
@@ -141,7 +163,18 @@ html {
     grid-column: 2 / 3;
     grid-row: 4 / 5;
 }
-
+.announcements ,.trending-tab{
+    margin-right: 20px;
+    margin-bottom: 40px;
+}
+.card, .announcements, .trending-tab{
+    font-size: 1em;
+    color:rgb(131, 127, 127);
+    
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 1px rgba(202, 201, 201, 0.8);
+}
 .card{
     display:grid;
 
@@ -149,11 +182,6 @@ html {
     width: minmax(300px, 100%);
     padding: 30px 10px 10px 10px;
 
-    font-size: 1em;
-    color:rgb(131, 127, 127);
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px 1px rgba(202, 201, 201, 0.8);
     border-left: 6px solid rgb(245, 182, 10);
 }
 .widgets{
@@ -175,13 +203,5 @@ html {
 .widgets button:hover img {
     transform: scale(1.1);
 }
-.project-name{
-    font-weight: bold;
-    color: black;
-    font-size: 1.5em;
-}
-.content {
-    margin-bottom:20px;
-    
-}
+
 
