@@ -160,8 +160,17 @@ html {
     grid-row: 3 / 4;
 }
 .trending-tab{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:15px;
+    padding: 10px;
+
     grid-column: 2 / 3;
     grid-row: 4 / 5;
+}
+.trending-user{
+    display: flex;
+    gap: 10px;
 }
 .announcements ,.trending-tab{
     margin-right: 20px;
