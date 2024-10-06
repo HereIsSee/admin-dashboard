@@ -14,11 +14,52 @@ html {
 }
 
 .header{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
     grid-column: 2 / 3;
     grid-row: 1 / 2;
 
     background-color: rgb(169, 235, 235);
 }
+.searchbar, .greeting-box{
+    margin-left: 10%;
+}
+
+.searchbar {
+    align-self: center;
+    justify-self: center;
+
+    
+    width:100%;
+}
+.profile{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.greeting-box{
+    display: flex;
+    gap: 10px;
+}
+.greeting-box .greeting div:first-child{
+    font-size: 12px;
+}
+
+.searchbar input {
+    width: 70%;
+    height: 15px;
+
+    background-color: rgb(233, 223, 223);
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+
 
 .sidebar{
     display:grid;
